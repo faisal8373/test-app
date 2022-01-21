@@ -5,7 +5,9 @@ import TopBar from './components/appBar/TopBar'
 function App() {
   return (
     <div className="App">
+      
       <TopBar />
+      
     </div>
   );
 }
