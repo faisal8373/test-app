@@ -10,7 +10,7 @@ function AddUser() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState(18);
 
   function ctaHandler() {
     console.log(userName, email, mobile, age);
@@ -22,7 +22,7 @@ function AddUser() {
   return (
     <div>
       <form className="form">
-        <Typography>Fill the Form for Sign Up</Typography>
+        <Typography variant="h3" color='primary'>Sign Up Form</Typography>
         <TextField
           className="text-field"
           label="Name"

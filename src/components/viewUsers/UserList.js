@@ -1,9 +1,11 @@
 import React from 'react';
+import DataTable from './UserTable';
 
 function UserList() {
   return <div>
-
-      List of users
+    
+<DataTable />
+      
   </div>;
 }
 
