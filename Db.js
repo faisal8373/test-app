@@ -2,7 +2,7 @@ var mongoose = require("mongoose")
 
 function dbConnection() {
   mongoose.connect(
-    `mongodb+srv://faisal205:testapp484@cluster0.lmb61.mongodb.net/test-app?retryWrites=true&w=majority`,
+    `connection string`,
     { useNewUrlParser: true, useUnifiedTopology: true },
     function (err) {
       if (err) {

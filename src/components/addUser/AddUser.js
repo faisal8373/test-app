@@ -5,19 +5,46 @@ import Button from "@mui/material/Button";
 import "./AddUserStyle.css";
 import { useState } from "react";
 import Alert from '@mui/material/Alert';
+import axios from 'axios';
 
 function AddUser() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
-  const [age, setAge] = useState(18);
+  const [age, setAge] = useState('');
+  
 
+  async function addUser(user){
+    try{
+      axios.post(`http://localhost:5000/addUser`, { user })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+
+    }catch(e){
+      console.log(e);
+    }
+  
+  }
   function ctaHandler() {
-    console.log(userName, email, mobile, age);
+    if(userName === '' || email === '' || mobile === '' || age < 18 || age > 60){
+      alert('All the fields are required. Age should be between 18 to 60');
+    }
+else{
+  var user = {
+    name: userName,
+    email: email,
+    mobile: mobile,
+    age: age
+  }
+  addUser(user);
+ 
     setUserName("");
     setEmail("");
     setMobile("");
     setAge("");
+}
   }
   return (
     <div>
