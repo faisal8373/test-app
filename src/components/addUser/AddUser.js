@@ -6,27 +6,20 @@ import "./AddUserStyle.css";
 import { useState } from "react";
 import Alert from '@mui/material/Alert';
 import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import {AddUserAction} from '../../store/actions/AddUserAction'
 
 function AddUser() {
+  const store = useSelector(store => store)
+  console.log('store', store.AddUserReducer)
+
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [age, setAge] = useState('');
-  
+  const dispatch = useDispatch()
 
-  async function addUser(user){
-    try{
-      axios.post(`http://localhost:5000/addUser`, { user })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
 
-    }catch(e){
-      console.log(e);
-    }
-  
-  }
   function ctaHandler() {
     if(userName === '' || email === '' || mobile === '' || age < 18 || age > 60){
       alert('All the fields are required. Age should be between 18 to 60');
@@ -38,7 +31,7 @@ else{
     mobile: mobile,
     age: age
   }
-  addUser(user);
+  dispatch(AddUserAction(user));
  
     setUserName("");
     setEmail("");
