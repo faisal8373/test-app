@@ -1,10 +1,9 @@
 let initialState = {
-    userName: '',
-    password: '',
-    city: '',
-    password: '',
+    name: '',
     email: '',
-    mobile: ''
+    mobile: '',
+    age: ''
+    
 }
 
 function AddUser(state=initialState, action){

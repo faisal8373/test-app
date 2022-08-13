@@ -1,12 +1,16 @@
-import firebase from "firebase";
+// import firebase from "firebase";
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCl2xALVRpPRtXauXDAn63EHFbFyRk7V3o",
-    authDomain: "foodstorehackathon.firebaseapp.com",
-    projectId: "foodstorehackathon",
-    storageBucket: "foodstorehackathon.appspot.com",
-    messagingSenderId: "161193196975",
-    appId: "1:161193196975:web:52f9aa36a1cb7f1ed3435a"
+  apiKey: "AIzaSyAuSFb8echcuVVFIkN_oJXo6KpZ1PO2FgU",
+  authDomain: "test-app-57722.firebaseapp.com",
+  projectId: "test-app-57722",
+  storageBucket: "test-app-57722.appspot.com",
+  messagingSenderId: "729812302109",
+  appId: "1:729812302109:web:68290e84ec22740e0c89f4"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

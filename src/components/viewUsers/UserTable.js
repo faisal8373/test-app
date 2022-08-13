@@ -8,29 +8,31 @@ import { useEffect } from 'react'
 var row = []
 var users = {}
 function viewUser(){
-  try{
-    axios.get(`http://localhost:5000/viewUser`)
-    .then(res => {
-      users = res.data;
-      
-      //   var user = {}
-      //         user.id = index + 1;
-      //         user.userName = users[index].name;
-      //         user.email = users[index].email;
-      //         user.mobile = users[index].mobile;
-      //         user.age = users[index].age;
-              
-      //         row = [...user]
-      //         }
-              // console.log(row)
-      // for (const prop in users) {
-      //   console.log(prop);
-      // }
-    })
 
-  }catch(e){
-    console.log(e);
-  }
+  
+  // try{
+  //   axios.get(`http://localhost:5000/viewUser`)
+  //   .then(res => {
+  //     users = res.data;
+      
+  //     //   var user = {}
+  //     //         user.id = index + 1;
+  //     //         user.userName = users[index].name;
+  //     //         user.email = users[index].email;
+  //     //         user.mobile = users[index].mobile;
+  //     //         user.age = users[index].age;
+              
+  //     //         row = [...user]
+  //     //         }
+  //             // console.log(row)
+  //     // for (const prop in users) {
+  //     //   console.log(prop);
+  //     // }
+  //   })
+
+  // }catch(e){
+  //   console.log(e);
+  // }
  
 
 }

@@ -11,7 +11,7 @@ import {AddUserAction} from '../../store/actions/AddUserAction'
 
 function AddUser() {
   const store = useSelector(store => store)
-  console.log('store', store.AddUserReducer)
+  // console.log('store', store.AddUserReducer)
 
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");

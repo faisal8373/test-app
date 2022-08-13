@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import TopBar from './components/appBar/TopBar'
+import TopBar from './components/appBar/TopBar';
+import store from './config/Store';
 
 function App() {
   return (
